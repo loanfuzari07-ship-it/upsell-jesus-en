@@ -52,7 +52,7 @@
     .offer-divider{width:55px;height:1px;background:#d5b17455;margin:17px auto}
     .guarantee{display:flex;align-items:center;justify-content:center;gap:8px;margin:0;color:#e9d19f;font-size:14px;font-weight:700}
     .guarantee svg{height:20px;width:20px}
-    .checkout-area{width:100%;max-width:650px;margin:22px auto 0}
+    .checkout-area{width:100%;max-width:400px;margin:22px auto 0}
     .checkout-area:empty{display:none}
     .checkout-area iframe{display:block;width:100%;border:0}
     .end-mark{display:flex;gap:12px;align-items:center;justify-content:center;margin:22px auto 0;width:100px;color:#a98445;font-size:15px}
@@ -188,19 +188,21 @@
           <p class="guarantee"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#shield"/></svg>60-Day Money-Back Guarantee</p>
         </section>
 
-        <div class="checkout-area" id="digitalgoat-4-miracle-codes-downsell">
-          <iframe
-            id="product-funnel-cmupykbwl02mm01pstf9dh6qt"
-            src="https://pay.digitalgoat.com.br/ext/funnel/cmupykbwl02mm01pstf9dh6qt"
-            title="DigitalGoat secure checkout"
-            width="100%" height="100%"
-            frameborder="0" allowtransparency="true">
-          </iframe>
+        <div class="checkout-area">
+	<!-- HOTMART - Sales Funnel Widget -->
+<!--- sales funnel container --->
+<div id="hotmart-sales-funnel"></div>
+
+<!--- script load and setup --->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+</script>
+<!-- HOTMART - Sales Funnel Widget -->
         </div>
         <div class="end-mark" aria-hidden="true">✦</div>
       </div>
     </article>
   </main>
-  <script src="https://app.digitalgoat.com.br/scripts/product-funnel.js"></script>
 </body>
 </html>

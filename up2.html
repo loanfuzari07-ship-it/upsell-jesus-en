@@ -20,7 +20,7 @@
     .only{margin:0;font-size:18px}
     .price{font-size:58px;line-height:1.15;font-weight:800;margin:5px 0;color:#222}
     .payment{font-size:16px;margin:5px 0 19px}
-    .funnel{width:100%;height:240px}
+    .funnel{width:100%;max-width:400px;margin:0 auto}
     .funnel iframe{display:block;border:0}
     .last{font-size:15px;color:#555;margin:22px 0 0}
     @media(max-width:480px){body{font-size:18px}header{padding:12px 14px}header strong{font-size:14px}header p{font-size:12px}main{padding-inline:19px}.gifts{font-size:18px}.price{font-size:53px}}
@@ -48,13 +48,16 @@
       <div class="price">$15</div>
       <p class="payment">One-time payment</p>
       <div class="funnel">
-        <iframe
-          id="product-funnel-cmupykbwl02mm01pstf9dh6qt"
-          src="https://pay.digitalgoat.com.br/ext/funnel/cmupykbwl02mm01pstf9dh6qt"
-          width="100%" height="100%"
-          frameborder="0" allowtransparency="true"
-          title="Lifetime Access — DigitalGoat">
-        </iframe>
+<!-- HOTMART - Sales Funnel Widget -->
+<!--- sales funnel container --->
+<div id="hotmart-sales-funnel"></div>
+
+<!--- script load and setup --->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+</script>
+<!-- HOTMART - Sales Funnel Widget -->
       </div>
     </div>
     <p class="last"><strong>You won’t be offered this opportunity again.</strong> If you choose to pass, your access to the <strong>Miracle Offering — Divine Temple of Prayer</strong> will be limited to <strong>90 days.</strong> You may need a miracle even after those 90 days.</p>
@@ -65,6 +68,5 @@
     mockup.addEventListener('error',hideMissingMockup);
     if(mockup.complete && !mockup.naturalWidth){hideMissingMockup()}
   </script>
-  <script src="https://app.digitalgoat.com.br/scripts/product-funnel.js"></script>
 </body>
 </html>
